@@ -1,0 +1,8 @@
+<li ><a href="" class="list-group-item">{{article.title}} <span class="badge">{{article.amountCost}}</span> </a></li>
+{{#if article.isParent}}
+  <ul>
+    {{#each article.items as |articleItem|}}
+    {{recurcive-view article = articleItem}}
+    {{/each}}
+  </ul>
+{{/if}}
